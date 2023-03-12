@@ -10,7 +10,7 @@ function Header() {
 
     function pathMatchRoute(route){
 
-            if(route === location.pathname){
+            if(route == location.pathname){
                 console.log(route,location.pathname);
                 return true
             }
@@ -26,9 +26,9 @@ function Header() {
             </dir>
             <div>
                 <ul className='flex space-x-10'>
-                    <li className={`py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent cursor-pointer ${pathMatchRoute('/') && 'border-b-red-500 text-black'}`}><Link to='/'>Home</Link></li>
-                    <li  className={`py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent cursor-pointer ${pathMatchRoute('/offers') && 'border-b-red-500 text-black'}`}><Link to='/offers'>Offers</Link></li>
-                    <li  className={`py-3 text-sm font-semibold text-gray-400 border-b-[3px] border-b-transparent cursor-pointer ${pathMatchRoute('/sign-in') && 'border-b-red-500 text-black'}`}><Link to='/sign-in'>Sign in</Link></li>
+                    <li className={`py-3 text-sm font-semibold text-gray-400  cursor-pointer ${pathMatchRoute('/') && 'border-b-[3px] border-b-red-500 text-black'}`}><Link to='/'>Home</Link></li>
+                    <li  className={`py-3 text-sm font-semibold text-gray-400 cursor-pointer ${pathMatchRoute('/offers') && 'border-b-[3px] border-b-red-500 text-black'}`}><Link to='/offers'>Offers</Link></li>
+                    <li  className={`py-3 text-sm font-semibold text-gray-400 cursor-pointer ${pathMatchRoute('/sign-in') && 'border-b-[3px] border-b-red-500 text-black'}`}><Link to='/sign-in'>Sign in</Link></li>
                 </ul>
             </div>
         </header>
